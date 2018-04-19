@@ -1,0 +1,10 @@
+<h1>All Articles</h1>
+
+<!-- Whatever the value of the index is divided by 3 the remainder should be 0 -->
+  <% @articles.each_with_index do |article, index| %>
+    <% if index % 3 == 0 %>
+      <br>===========<br>
+    <% end %>
+    <% index + 1 %><%= link_to article.title, article_path(article) %>
+
+  <% end %>
